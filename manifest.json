@@ -28,12 +28,19 @@
     "content_scripts": [
         {
           "matches": ["*://*.postimees.ee/*"],
-          "js": ["postimees.js"]
-        }
+          "js": ["postimees.js"],
+          "all_frames": true
+        },
+        {
+            "matches": ["*://*.delfi.ee/*", "*://*.delfi.ee/"],
+            "js": ["delfi.js"],
+            "all_frames": true
+          }
       ],
     
       "background": {
-        "scripts": ["postimees-bg.js"]
+            "persistent": true,
+            "scripts": ["postimees-bg.js", "delfi-bg.js"]
       },
 
       "permissions": [
