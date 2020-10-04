@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Ei Sponsor!",
+    "name": "Sisuturunduse blokker",
     "author": "Erlend Eelmets",
     "version": "0.1",
     "description": "Blokeerib sponsoreeritud artiklid ajalehtedes.",
@@ -21,9 +21,25 @@
         "144": "icons/android-icon-144x144.png",
         "192": "icons/android-icon-192x192.png"
       },
-      "default_title": "Ei Sponsor!",
+      "default_title": "Sisuturunduse blokker",
       "default_popup": "main.html"
     },
-  
-    "permissions": ["history"]
+
+    "content_scripts": [
+        {
+          "matches": ["*://*.postimees.ee/*"],
+          "js": ["postimees.js"]
+        }
+      ],
+    
+      "background": {
+        "scripts": ["postimees-bg.js"]
+      },
+
+      "permissions": [
+        "activeTab",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking"
+      ]
   }
