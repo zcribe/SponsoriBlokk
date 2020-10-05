@@ -27,13 +27,8 @@
 
     "content_scripts": [
         {
-          "matches": ["*://*.postimees.ee/*"],
-          "js": ["postimees.js"],
-          "all_frames": true
-        },
-        {
-            "matches": ["*://*.delfi.ee/*", "*://*.delfi.ee/"],
-            "js": ["delfi.js"],
+            "matches": ["*://*.delfi.ee/*", "*://*.delfi.ee/", "*://*.postimees.ee/*"],
+            "js": ["css-blocker.js"],
             "all_frames": true
           }
       ],
