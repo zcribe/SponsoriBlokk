@@ -35,7 +35,7 @@
     
       "background": {
             "persistent": true,
-            "scripts": ["postimees-bg.js", "delfi-bg.js"]
+            "scripts": ["request-blocker.js", "css-blocker-background.js"]
       },
 
       "permissions": [
