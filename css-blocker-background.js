@@ -35,7 +35,7 @@ const TAGS = [
 ]
 
 
-document.querySelector("html").addEventListener("change", (event) => {
+document.querySelector("html").addEventListener("change", (_event) => {
         var sponsored = document.querySelectorAll(TAGS.toString())
 
         sponsored.forEach(function(articleItem){

@@ -1,3 +1,7 @@
+var FILTERLIST = {
+  urls: ['*://*.doubleclick.net/*', '*://www.google-analytics.com/*']
+};
+
 function listener(details) {
     console.log("Blocked: ", details.url);
     return {
@@ -5,11 +9,10 @@ function listener(details) {
     };
 }
 
-require(['/constants/constants.js'], function (constants) {
+
   browser.webRequest.onBeforeRequest.addListener(
     listener,
-    constants.FILTERLIST,
+    FILTERLIST,
     ["blocking"]
     );
 
-  });
