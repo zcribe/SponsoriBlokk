@@ -28,14 +28,14 @@
     "content_scripts": [
         {
             "matches": ["*://*.delfi.ee/*", "*://*.delfi.ee/", "*://*.postimees.ee/*"],
-            "js": ["css-blocker.js"],
+            "js": ["lib/require.js", "css-blocker.js"],
             "all_frames": true
           }
       ],
     
       "background": {
             "persistent": true,
-            "scripts": ["request-blocker.js", "css-blocker-background.js"]
+            "scripts": ["lib/require.js", "request-blocker.js", "css-blocker-background.js"]
       },
 
       "permissions": [

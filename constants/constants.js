@@ -1,4 +1,4 @@
-export const TAGS = [
+const TAGS = [
     ".adform-video-base ",
     ".adform-video-state-finished",
     "video-container",
@@ -34,7 +34,7 @@ export const TAGS = [
     "article[commercial-tag]"
 ]
 
-export const FILTERLIST = {urls:[
+const FILTERLIST = {urls:[
     '*://*.doubleclick.net/*',
     '*://www.google-analytics.com/*'
 ],}

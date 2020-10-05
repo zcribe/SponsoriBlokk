@@ -1,6 +1,3 @@
-import {FILTERLIST} from './constants'
-
-
 function listener(details) {
     console.log("Blocked: ", details.url);
     return {
@@ -8,8 +5,11 @@ function listener(details) {
     };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-listener,
-FILTERLIST,
-["blocking"]
-);
+require(['/constants/constants.js'], function (constants) {
+  browser.webRequest.onBeforeRequest.addListener(
+    listener,
+    constants.FILTERLIST,
+    ["blocking"]
+    );
+
+  });
