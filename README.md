@@ -1,5 +1,3 @@
 # SponsoriBlokk
 
-
-Icons used created by:
-Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+A very simplistic and crude yet functional implementation of an ad blocker for browsers. Here for educational purposes.
